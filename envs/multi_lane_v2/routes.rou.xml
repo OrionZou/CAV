@@ -1,0 +1,47 @@
+<routes>
+
+    <vType id="cav1" vClass="taxi" accel="3" decel="8" emergencyDecel="8" sigma="0" length="4.870" width="1.840"
+           maxSpeed="30" speedFactor="1" speedDev="2" callFollowMode="carFollowing-Krauss" actionStepLength="0.2" tau="1.4"
+           laneChangeModel="DK2008" jmCrossingGap="0" jmIgnoreFoeProb="1" jmIgnoreFoeSpeed="100"/>
+    <vType id="human1" vClass="taxi" accel="3" decel="8" sigma="0.5" length="4.870" width="1.840" maxSpeed="50"
+           speedFactor="1.5" callFollowMode="carFollowing-Krauss" actionStepLength="0.2" tau="1.4"
+           laneChangeModel="DK2008"/>
+    <vType id="vtype3" vClass="taxi" accel="0.000001" decel="0.000001" sigma="0.5" length="4.870" width="1.840"
+           maxSpeed="60" callFollowMode="carFollowing-Krauss" actionStepLength="0.2" tau="1.4"
+           laneChangeModel="DK2008"/>
+    <vType id="ped" length="0.21" width="0.48" height="1.72" minGap="0.25"  jmDriveAfterRedTime="-1" jmCrossingGap="0" jmIgnoreFoeProb="1" jmIgnoreFoeSpeed="50" maxSpeed="1.39"/>
+    <!--<vType id ="vtype3" vClass="taxi"  length="4.870" width="1.840"  maxSpeed="60" security="0" estimation="0" callFollowMode="carFollowing-Wiedemann" actionStepLength="0.2" laneChangeModel="DK2008"/>-->
+
+    <route id="pedestrian1" edges="-gneE2 -gneE0"/>
+    <route id="pedestrian2" edges="gneE0 gneE2"/>
+    <route id="pedestrian1_" edges="-gneE0 -gneE2"/>
+    <route id="pedestrian2_" edges="gneE2 gneE0"/>
+    <personFlow id="pf1" type="ped" begin="0" end="1000" personsPerHour="200">
+        <walk route="pedestrian1"/>
+    </personFlow>
+    <personFlow id="pf2" type="ped" begin="1" end="1000" personsPerHour="150">
+        <walk route="pedestrian2"/>
+    </personFlow>
+    <personFlow id="pf1_" type="ped" begin="5" end="1000" personsPerHour="400">
+        <walk route="pedestrian1_" />
+    </personFlow>
+<!--    <vehicle id="veh1" type="cav1" depart="6" departSpeed="1" color="1,1,0">-->
+<!--        <route edges="-gneE3 -gneE4"/>-->
+<!--    </vehicle>-->
+    <personFlow id="pf2_" type="ped" begin="9" end="1000" personsPerHour="150">
+        <walk route="pedestrian2_"/>
+    </personFlow>
+    	<flow id="veh1" color="1,1,0"  begin="20" end= "10000" departSpeed="10" period="5" type="cav1">
+        <route id="vehicles" edges="-gneE3 -gneE4"/>
+        </flow>
+
+
+
+
+    <!--end= "864000"-->
+    <!--	<flow id="vehflow" color="1,1,0"  begin="20" end= "8640000" departSpeed="10" period="5" type="cav1">-->
+    <!--    <route id="vehicles" edges="-gneE2 gneE4"/>-->
+    <!--    </flow>-->
+
+
+</routes>

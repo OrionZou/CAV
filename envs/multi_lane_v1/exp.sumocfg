@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+<input>
+<net-file value="new_cross3.net.xml"/>
+<route-files value="routes.rou.xml"/>
+<gui-settings-file value="gui-settings.cfg"/>
+</input>
+
+<report>
+<no-step-log value="true"/>
+<duration-log.disable value="true"/>
+</report>
+
+<processing>
+<collision.action value="remove"/>
+<pedestrian.model value="striping"/>
+</processing>
+
+<time>
+<begin value="0"/>
+<step-length value="0.2"/>
+<end value="1000"/>
+<!--
+864000=3600*5*24*2 2days
+-->
+</time>
+
+<gui_only>
+<start value="t"/>
+<quit-on-end value="t"/>
+</gui_only>
+
+</configuration>
+
+
+
