@@ -1,4 +1,4 @@
-Based on sumo develop an environemnt of vehicles avoidance pedestrians.
+(waiting for Update) Based on sumo develop an environemnt of vehicles avoidance pedestrians.
 
 The code need install sumo
 https://sumo.dlr.de/docs/Downloads.php
@@ -20,10 +20,14 @@ python naive_v6_1_1/run_sumo_new.py --env sumo_env-v6 --env_path /home/user/repo
 
 Use tensorboard to analyze the training process data.
 
+
 Thanks for codes:
+
 PPO: zhangchuheng123
 https://github.com/zhangchuheng123/Reinforcement-Implementation/blob/master/code/ppo.py
+
 SAC: ZenYiYan
 https://github.com/Yonv1943/ElegantRL/blob/master/AgentZoo.py
+
 Code framework：ShangtongZhang
 https://github.com/ShangtongZhang/DeepRL/tree/master/deep_rl
