@@ -1,5 +1,7 @@
 (waiting for Update) Based on sumo develop an environemnt of vehicles avoidance pedestrians.
 
+![[images/env.py]]
+
 The code need install sumo
 https://sumo.dlr.de/docs/Downloads.php
 
@@ -20,6 +22,7 @@ python naive_v6_1_1/run_sumo_new.py --env sumo_env-v6 --env_path /home/user/repo
 
 Use tensorboard to analyze the training process data.
 
+![[images/aeb.py]]
 
 Thanks for codes:
 
