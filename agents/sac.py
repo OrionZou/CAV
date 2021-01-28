@@ -1,3 +1,6 @@
+"""Thanks for ZenYiYan, GitHub: YonV1943 ElegantRL
+https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html
+"""
 import numpy as np
 import torch
 import torch.nn as nn
@@ -19,6 +22,7 @@ class Agent(object):
                  config,
                  automatic_entropy_tuning=True,
                  hidden_sizes=(256, 256),
+                 action_modifier=None,
                  lr=3e-4,
                  minibatch_size=256,
                  num_epoch=1,
@@ -44,7 +48,7 @@ class Agent(object):
         # self.policy = ActorSAC(self.obs_dim ,self.act_dim, self.hidden_sizes[-1]).to(self.device)
         self.policy = SACActor(self.obs_dim, self.act_dim,
                                hidden_sizes=self.hidden_sizes,
-                               device=self.device).to(self.device)
+                               device=self.device,action_modifier=action_modifier).to(self.device)
         self.policy_optimizer = optim.Adam(self.policy.parameters(), lr=self.lr)
         self.qf = DoubleQCritic(self.obs_dim + self.act_dim, 1, hidden_sizes=self.hidden_sizes).to(self.device)
         # critic_dim = int(self.hidden_sizes[-1] * 1.25)

@@ -1,3 +1,6 @@
+"""Thanks for zhangchuheng123
+https://github.com/Yonv1943/ElegantRL/blob/master/AgentZoo.py
+"""
 import numpy as np
 import random
 import torch.optim as optim
