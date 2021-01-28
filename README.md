@@ -1,6 +1,6 @@
 (waiting for Update) Based on sumo develop an environemnt of vehicles avoidance pedestrians.
 
-https://github.com/GyChou/CAV/blob/master/images/env.png
+![image](https://github.com/GyChou/CAV/blob/master/images/env.png)
 
 The code need install sumo
 https://sumo.dlr.de/docs/Downloads.php
@@ -22,7 +22,7 @@ python naive_v6_1_1/run_sumo_new.py --env sumo_env-v6 --env_path /home/user/repo
 
 Use tensorboard to analyze the training process data.
 
-https://github.com/GyChou/CAV/blob/master/images/aeb.png
+![image](https://github.com/GyChou/CAV/blob/master/images/aeb.png)
 
 Thanks for codes:
 
