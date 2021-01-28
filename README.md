@@ -18,4 +18,12 @@ run sac-safe-reward with
 python naive_v6_1_1/run_sumo_new.py --env sumo_env-v6 --env_path /home/user/repos/CAV/envs/naive_v6_1_1/exp.sumocfg --algo sac --reward_model 4 
 
 
-Use tensorboard to analyze the training process data
+Use tensorboard to analyze the training process data.
+
+Thanks for codes:
+PPO: zhangchuheng123
+https://github.com/zhangchuheng123/Reinforcement-Implementation/blob/master/code/ppo.py
+SAC: ZenYiYan
+https://github.com/Yonv1943/ElegantRL/blob/master/AgentZoo.py
+Code framework：ShangtongZhang
+https://github.com/ShangtongZhang/DeepRL/tree/master/deep_rl
